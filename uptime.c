@@ -4,7 +4,7 @@
 int
 main(int argc, char *argv[])
 {
- if(argc > 1)
+ if(argc == 1)
  {
    int cc = atoi(argv[1]); // ciclos de reloj
    int time = (60*uptime())/cc;
@@ -15,7 +15,7 @@ main(int argc, char *argv[])
  }
  else
  {
-   printf(2, "falta colocar los ciclos de reloj\n");
+   printf(2, "Error: Missing clock cycles\n");
  }
  exit();
 }
