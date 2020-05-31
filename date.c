@@ -11,9 +11,6 @@ main(int argc, char *argv[])
     printf(2, "date failed\n");
     exit();
   }
-
-  // su codigo debe imprimir el tiempo en el formato que desee..
-  printf(1, "%d:%d:%d   %d/%d/%d UCT\n",r.hour, r.minute, r.second, r.year, r.month, r.day);
-  //Se agrega esta linea para que el comando realice la impresion
+  printf(1, "%d:%d:%d   %d/%d/%d\n",r.hour, r.minute, r.second, r.day, r.month, r.year);
   exit();
 }
