@@ -6,11 +6,14 @@ int
 main(int argc, char *argv[])
 {
   struct rtcdate r;
-
-  if (date(&r)) {
+  if (date(&r)) 
+  {
     printf(2, "date failed\n");
     exit();
   }
-  printf(1, "%d:%d:%d   %d/%d/%d\n",r.hour, r.minute, r.second, r.day, r.month, r.year);
+  else
+  {
+    printf(1, "%d:%d:%d   %d/%d/%d\n",r.hour, r.minute, r.second, r.day, r.month, r.year);
+  }
   exit();
 }
