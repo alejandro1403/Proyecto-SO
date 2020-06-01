@@ -563,7 +563,7 @@ count(int llamada)
 {  
   if(num == 0)
   {
-  cprintf("Fork: %d\n", cFork);
+ 	cprintf("Fork: %d\n", cFork);
 	cprintf("Exit: %d\n", cExit);
 	cprintf("Wait: %d\n", cWait);
 	cprintf("Pipe: %d\n", cPipe);
@@ -584,23 +584,23 @@ count(int llamada)
 	cprintf("Link: %d\n", cLink);
 	cprintf("Mkdir: %d\n", cMkdir);
 	cprintf("Close: %d\n", cClose);
-  cprintf("Date: %d\n", cDate);
-  cprintf("Count: %d\n", cCount);
+  	cprintf("Date: %d\n", cDate);
+  	cprintf("Count: %d\n", cCount);
   }else if(num == 1)
   {
-		cprintf("Fork: %d\n", cFork);
+    cprintf("Fork: %d\n", cFork);
 	}else if(num == 2)
   {
-		cprintf("Exit: %d\n", cExit);
+    cprintf("Exit: %d\n", cExit);
 	}else if(num == 3)
   {
-		cprintf("Wait: %d\n", cWait);
+    cprintf("Wait: %d\n", cWait);
 	}else if(num == 4)
   {
-		cprintf("Pipe: %d\n", cPipe);
+    cprintf("Pipe: %d\n", cPipe);
 	}else if(num == 5)
   {
-		cprintf("Read: %d\n", cRead);
+    cprintf("Read: %d\n", cRead);
 	}else if(num == 6)
   {
     cprintf("Kill: %d\n", cKill);
