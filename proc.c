@@ -561,7 +561,7 @@ procdump(void)
 int
 count(int llamada)
 {  
-  if(num == 0)
+  if(llamada == 0)
   {
  	cprintf("Fork: %d\n", cFork);
 	cprintf("Exit: %d\n", cExit);
@@ -586,72 +586,73 @@ count(int llamada)
 	cprintf("Close: %d\n", cClose);
   	cprintf("Date: %d\n", cDate);
   	cprintf("Count: %d\n", cCount);
-  }else if(num == 1)
+  }else if(llamada == 1)
   {
     cprintf("Fork: %d\n", cFork);
-	}else if(num == 2)
+	}else if(llamada == 2)
   {
     cprintf("Exit: %d\n", cExit);
-	}else if(num == 3)
+	}else if(llamada == 3)
   {
     cprintf("Wait: %d\n", cWait);
-	}else if(num == 4)
+	}else if(llamada == 4)
   {
     cprintf("Pipe: %d\n", cPipe);
-	}else if(num == 5)
+	}else if(llamada == 5)
   {
     cprintf("Read: %d\n", cRead);
-	}else if(num == 6)
+	}else if(llamada == 6)
   {
     cprintf("Kill: %d\n", cKill);
-	}else if(num == 7)
+	}else if(llamada == 7)
   {
     cprintf("Exec: %d\n", cExec);
-	}else if(num == 8)
+	}else if(llamada == 8)
   {
     cprintf("Fstat: %d\n", cFstat);
-	}else if(num == 9)
+	}else if(llamada == 9)
   {
     cprintf("Chdir: %d\n", cChdir);
-	}else if(num == 10)
+	}else if(llamada == 10)
   {
     cprintf("Dup: %d\n", cDup);
-	}else if(num == 11)
+	}else if(llamada == 11)
   {
     cprintf("Getpid: %d\n", cGetpid);
-	}else if(num == 12)
+	}else if(llamada == 12)
   {
     cprintf("Sbrk: %d\n", cSbrk);
-	}else if(num == 13)
+	}else if(llamada == 13)
   {
     cprintf("Sleep: %d\n", cSleep);
-	}else if(num == 14)
+	}else if(llamada == 14)
   {
     cprintf("Uptime: %d\n", cUptime);
-	}else if(num == 15)
+	}else if(llamada == 15)
   {
     cprintf("Open: %d\n", cOpen);
-	}else if(num == 16)
+	}else if(llamada == 16)
   {
      cprintf("Write: %d\n", cWrite);
-	}else if(num == 17){
+	}else if(llamada == 17)
+  {
      cprintf("Mknod: %d\n", cMknod);
-	}else if(num == 18)
+	}else if(llamada == 18)
   {
      cprintf("Unlink: %d\n", cUnlink);
-	}else if(num == 19)
+	}else if(llamada == 19)
   {
      cprintf("Link: %d\n", cLink);
-	}else if(num == 20)
+	}else if(llamada == 20)
   {
      cprintf("Mkdir: %d\n", cMkdir);
-	}else if(num == 21)
+	}else if(llamada == 21)
   {
      cprintf("Close: %d\n", cClose);
-	}else if(num == 22)
+	}else if(llamada == 22)
   {
      cprintf("Date: %d\n", cDate);
-	}else if(num == 23)
+	}else if(llamada == 23)
   {
      cprintf("Count: %d\n", cCount);
 	}
