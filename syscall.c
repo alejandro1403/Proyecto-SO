@@ -160,6 +160,7 @@ syscall(void)
 {
   int num;
   struct proc *curproc = myproc();
+  num = curproc->tf->eax;
   
   if(num == 1){
     cFork++;
@@ -208,7 +209,6 @@ syscall(void)
   }else if(num == 23){
     cCount++;
   }
-  num = curproc->tf->eax;
   if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
     curproc->tf->eax = syscalls[num]();
   } else {
