@@ -102,5 +102,7 @@ sys_date(void)
 int
 sys_count(void)
 {
-  return count();
+  int num;
+  argint(0, &num);
+  return countPar(num);
 }
