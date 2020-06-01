@@ -98,3 +98,9 @@ sys_date(void)
   cmostime(r);
   return 0;
 }
+
+int
+sys_count(void)
+{
+  return count();
+}
