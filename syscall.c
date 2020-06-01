@@ -200,7 +200,7 @@ syscall(void)
   }else if(num == 19){
     cLink++;       
   }else if(num == 20){
-    countMkdir++;      
+    cMkdir++;      
   }else if(num == 21){
     cClose++; 
   }else if(num == 22){
