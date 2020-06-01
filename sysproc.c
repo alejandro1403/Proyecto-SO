@@ -104,5 +104,5 @@ sys_count(void)
 {
   int num;
   argint(0, &num);
-  return countPar(num);
+  return count(num);
 }
