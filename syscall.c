@@ -82,6 +82,29 @@ argstr(int n, char **pp)
   return fetchstr(addr, pp);
 }
 
+extern int cFork;
+extern int cExit;
+extern int cWait;
+extern int cPipe;
+extern int cRead;
+extern int cKill;
+extern int cExec;
+extern int cFstat;
+extern int cChdir;
+extern int cDup;
+extern int cGetpid;
+extern int cSbrk;
+extern int cSleep;
+extern int cUptime;
+extern int cOpen;
+extern int cWrite;
+extern int cMknod;
+extern int cUnlink;
+extern int cLink;
+extern int cMkdir;
+extern int cClose;
+extern int cDate;
+extern int cCount;
 extern int sys_chdir(void);
 extern int sys_close(void);
 extern int sys_dup(void);
@@ -104,6 +127,7 @@ extern int sys_wait(void);
 extern int sys_write(void);
 extern int sys_uptime(void);
 extern int sys_date(void);
+extern int sys_count(void);
 
 static int (*syscalls[])(void) = {
 [SYS_fork]    sys_fork,
@@ -131,12 +155,59 @@ static int (*syscalls[])(void) = {
 [SYS_count]   sys_count,
 };
 
-void
+void 
 syscall(void)
 {
   int num;
   struct proc *curproc = myproc();
-
+  
+  if(num == 1){
+    cFork++;
+  }else if(num == 2){
+    cExit++;
+  }else if(num == 3){
+    cWait++;
+  }else if(num == 4){
+    cPipe++;
+  }else if(num == 5){
+    cRead++;
+  }else if(num == 6){
+    cKill++;        
+  }else if(num == 7){
+    cExec++;       
+  }else if(num == 8){
+    cFstat++;        
+  }else if(num == 9){
+    cChdir++;       
+  }else if(num == 10){
+    cDup++;       
+  }else if(num == 11){
+    cGetpid++;       
+  }else if(num == 12){
+    cSbrk++;
+  }else if(num == 13){
+    cSleep++;       
+  }else if(num == 14){
+    cUptime++;       
+  }else if(num == 15){
+    cOpen++;       
+  }else if(num == 16){
+    cWrite++;      
+  }else if(num == 17){
+    cMknod++;       
+  }else if(num == 18){
+    cUnlink++;
+  }else if(num == 19){
+    cLink++;       
+  }else if(num == 20){
+    countMkdir++;      
+  }else if(num == 21){
+    cClose++; 
+  }else if(num == 22){
+    cDate++;
+  }else if(num == 23){
+    cCount++;
+  }
   num = curproc->tf->eax;
   if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
     curproc->tf->eax = syscalls[num]();
